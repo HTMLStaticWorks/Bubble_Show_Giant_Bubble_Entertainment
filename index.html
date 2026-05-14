@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Bubble Shows | Bubble Show & Giant Bubble Entertainment</title>
+    <meta name="description" content="Premium bubble entertainment for kids parties, festivals, and corporate events. Magical giant bubble shows that create unforgettable memories.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        cyan: '#22D3EE',
+                        purple: '#8B5CF6',
+                        dark: '#0F172A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        fredoka: ['Fredoka', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Premium Design System - Standard CSS to remove IDE warnings */
+        :root {
+            --primary: #3B82F6;
+            --cyan: #22D3EE;
+            --purple: #8B5CF6;
+            --dark: #0F172A;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, var(--primary), var(--cyan), var(--purple));
+            color: white;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 15px -3px rgba(34, 211, 238, 0.3);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(34, 211, 238, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: inherit;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            transition: all 0.3s ease;
+            padding: 1.5rem 0;
+        }
+
+        .nav-sticky.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .nav-sticky.scrolled {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        /* Animation Utilities */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-dark text-slate-800 dark:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="nav-sticky fixed top-0 w-full z-50 px-4 lg:px-12 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between bg-white/10 dark:bg-dark/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3">
+            <a href="index.html" class="flex items-center gap-2 group transition-all">
+                <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary via-cyan to-purple rounded-full blur-sm opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                    <svg class="w-6 h-6 sm:w-8 sm:h-8 relative z-10" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9" stroke="url(#bubble-grad)" stroke-width="1.5"/>
+                        <path d="M15 8.5C15 8.5 14.5 7.5 13 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <defs><linearGradient id="bubble-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
+            </a>
+            
+            <ul class="hidden lg:flex items-center gap-8 font-semibold">
+                <li><a href="index.html" class="hover:text-cyan transition-colors">Home 1</a></li>
+                <li><a href="home-2.html" class="hover:text-cyan transition-colors">Home 2</a></li>
+                <li><a href="about.html" class="hover:text-cyan transition-colors">About</a></li>
+                <li><a href="services.html" class="hover:text-cyan transition-colors">Services</a></li>
+                <li><a href="packages.html" class="hover:text-cyan transition-colors">Packages</a></li>
+                <li><a href="gallery.html" class="hover:text-cyan transition-colors">Gallery</a></li>
+                
+                <li><a href="contact.html" class="hover:text-cyan transition-colors">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all">
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                    <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                </button>
+                <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-xs px-3 py-1.5 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider">RTL</button>
+                <a href="login.html" class="hidden lg:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
+                <button class="lg:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
+            <ul class="flex flex-col gap-4 font-semibold text-center mb-6">
+                <li><a href="index.html" class="hover:text-cyan transition-colors block">Home 1</a></li>
+                <li><a href="home-2.html" class="hover:text-cyan transition-colors block">Home 2</a></li>
+                <li><a href="about.html" class="hover:text-cyan transition-colors block">About</a></li>
+                <li><a href="services.html" class="hover:text-cyan transition-colors block">Services</a></li>
+                <li><a href="packages.html" class="hover:text-cyan transition-colors block">Packages</a></li>
+                <li><a href="gallery.html" class="hover:text-cyan transition-colors block">Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-cyan transition-colors block">Contact</a></li>
+            </ul>
+            <div class="flex flex-col gap-4 items-center border-t border-slate-200 dark:border-white/10 pt-6">
+                <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-sm px-6 py-3 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider w-full">RTL</button>
+                <a href="login.html" class="btn-primary py-3 px-6 text-sm w-full text-center">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Banner -->
+    <section class="relative min-h-screen flex items-center justify-center pt-32 lg:pt-40 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-cyan/5 to-purple/10 -z-10"></div>
+        
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="inline-block px-4 py-2 rounded-full bg-cyan/10 text-cyan font-bold text-sm mb-6 uppercase tracking-widest">Premium Bubble Entertainment</span>
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8">
+                    Magical Bubble Shows That Create <span class="bg-gradient-to-r from-primary to-purple bg-clip-text text-transparent">Unforgettable Memories</span>
+                </h1>
+                <p class="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-lg">
+                    Experience the wonder of giant bubbles, shimmering sculptures, and interactive science-based fun for all ages.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="btn-primary w-full sm:w-auto">Book a Show</a>
+                    <a href="gallery.html" class="btn-primary w-full sm:w-auto">Watch Performance</a>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="fade-left">
+                <div class="glass-card p-4 relative group">
+                    <img src="https://media.istockphoto.com/id/841828858/photo/man-artist-blowing-many-soap-bubble-soap-bubble-show-in-black-studio.jpg?s=612x612&w=0&k=20&c=dSyD3SGDyZCARepNvfq2S4tPa-OpdMaSAuXjoJ5jAQQ=" alt="Giant Bubble Artist" class="rounded-2xl w-full h-[500px] object-cover">
+                    <div class="absolute -bottom-6 -right-6 glass-card p-6 flex items-center gap-4 animate-bounce-slow">
+                        <div class="w-12 h-12 rounded-full bg-cyan/20 flex items-center justify-center text-cyan">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-bold">500+ Events</p>
+                            <p class="text-xs opacity-70">Magically Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Glass Card Decorations -->
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Services -->
+    <section class="py-24 bg-white dark:bg-dark/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4">Our Magical Services</h2>
+                <p class="text-lg opacity-70 max-w-2xl mx-auto">From intimate parties to grand festivals, we bring the shimmering magic of bubbles to every occasion.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://playandgo.com.au/wp-content/uploads/2025/03/big-bubble-show-pic5.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Giant Bubble Experience</h3>
+                    <p class="opacity-70 mb-6">Witness bubbles the size of cars floating through the air. A visually stunning outdoor experience.</p>
+                    <a href="services.html" class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">Learn More →</a>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk02wEgrDyN7sqBUVdsnS5CxMbBmZnYTeo1g&s" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Indoor Stage Shows</h3>
+                    <p class="opacity-70 mb-6">Incredible bubble sculptures, smoke-filled bubbles, and children inside bubbles!</p>
+                    <a href="services.html" class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">Learn More →</a>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://glamadelaide.com.au/wp-content/uploads/2022/02/Bubble-Show.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Science Bubble Lab</h3>
+                    <p class="opacity-70 mb-6">Educational STEM-focused programs teaching the surface tension and science behind bubbles.</p>
+                    <a href="services.html" class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Why Choose Us -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="zoom-in">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://img.freepik.com/free-photo/joyful-kid-having-fun_23-2151082454.jpg?semt=ais_hybrid&w=740&q=80" class="rounded-3xl h-64 w-full object-cover">
+                        <img src="https://media.istockphoto.com/id/1211955457/photo/children-at-the-feast-soap-bubbles-show-childrens-party-to-burst-the-soap-bubble.jpg?s=612x612&w=0&k=20&c=3r5TgF_8BIxZ3OmuoOlHMnwAKgu41ho-8nFMOYsBHGM=" class="rounded-3xl h-64 w-full object-cover">
+                    </div>
+                  
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-8 leading-tight">Why Choose Our <span class="text-cyan italic">Bubble Magic?</span></h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan/10 flex-shrink-0 flex items-center justify-center text-cyan">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Professional Entertainers</h4>
+                                <p class="opacity-70">Highly trained performers who know how to engage crowds of all sizes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Safe & Non-Toxic</h4>
+                                <p class="opacity-70">Our special bubble formula is eco-friendly, safe for children, and stain-free.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-purple/10 flex-shrink-0 flex items-center justify-center text-purple">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Interactive Experience</h4>
+                                <p class="opacity-70">We don't just perform; we let the guests touch and create bubbles themselves!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Gallery Showcase -->
+    <section class="py-24 bg-slate-900 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-end justify-between mb-16 gap-6">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-4 italic">Breathtaking Moments</h2>
+                    <p class="text-lg opacity-60">Peek into our world of iridescent wonders.</p>
+                </div>
+                <a href="gallery.html" class="btn-secondary whitespace-nowrap" data-aos="fade-left">View Full Gallery</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up">
+                <div class="lg:col-span-2 lg:row-span-2 overflow-hidden rounded-3xl relative group">
+                    <img src="https://media.istockphoto.com/id/1421313801/photo/woman-magician-illusionist-circus-in-theatrical-clothes-stylish-hat-in-shows-soap-bubbles.jpg?s=612x612&w=0&k=20&c=rx16yKiH8K0sOxObho_Df_oBzafk0s_OnNfMkP2ocfk=" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                        <p class="font-bold text-xl">Giant Bubble Show</p>
+                        <p class="opacity-70 text-sm">Central Park Performance</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-3xl h-64 relative group">
+                    <img src="https://media.istockphoto.com/id/451193363/photo/female-mime-catching-bubbles-against-black-background.jpg?s=612x612&w=0&k=20&c=aWGJRD0e21hrbBh-HCrDVhmw5e1ey5A8_pZh58qNbUY=" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-3xl h-64 relative group">
+                    <img src="https://www.welcometoskipton.com/wp-content/uploads/2025/11/ASF24-big-bubbles-scaled-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-3xl h-64 relative group">
+                    <img src="https://www.discoverboynevalley.ie/sites/default/files/events/Ray_Bubbles.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-3xl h-64 relative group">
+                    <img src="https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2026/04/30124849/1620x1080_2_y23ycp-1024x683.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Party Packages -->
+    <section class="py-24 bg-slate-50 dark:bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4">Choose Your Magic</h2>
+                <p class="opacity-70">Perfectly crafted packages for every size of event.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="glass-card flex flex-col border-none bg-white dark:bg-white/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <span class="px-4 py-1 rounded-full bg-cyan/10 text-cyan text-xs font-bold uppercase">Starter</span>
+                        <h3 class="text-3xl font-bold mt-4">Mini Bubble</h3>
+                        <p class="text-4xl font-black mt-2 text-primary">$199</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> 45 Min Performance</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Interactive Kid-in-Bubble</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Giant Bubble Finale</li>
+                        <li class="opacity-30 flex items-center gap-3"><span class="w-5 h-5 bg-slate-200 rounded-full flex items-center justify-center text-[10px]">✕</span> Dry Ice Effects</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary w-full">Book This</a>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="glass-card flex flex-col border-primary bg-gradient-to-b from-primary/10 to-transparent relative lg:scale-110 z-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-xs font-bold rounded-full uppercase">Most Popular</div>
+                    <div class="mb-8">
+                        <span class="px-4 py-1 rounded-full bg-purple/10 text-purple text-xs font-bold uppercase">Pro</span>
+                        <h3 class="text-3xl font-bold mt-4">Ultimate Party</h3>
+                        <p class="text-4xl font-black mt-2 text-primary">$349</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 font-bold"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> 90 Min Full Experience</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Every Guest in a Bubble</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Smoke Bubble Sculpture</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Glow Bubble Party</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary w-full shadow-xl shadow-primary/40">Book Popular</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="glass-card flex flex-col border-none bg-white dark:bg-white/5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-8">
+                        <span class="px-4 py-1 rounded-full bg-purple/10 text-purple text-xs font-bold uppercase">Mega</span>
+                        <h3 class="text-3xl font-bold mt-4">Grand Festival</h3>
+                        <p class="text-4xl font-black mt-2 text-primary">Custom</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Custom Duration</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Multiple Performers</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Stage Production</li>
+                        <li class="flex items-center gap-3"><span class="w-5 h-5 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center text-[10px]">✓</span> Educational Add-on</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary w-full text-slate-800 dark:text-white">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials + Booking CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4 italic">What Parents Say</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                <div class="glass-card flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <!-- Repeats 5 times -->
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="mb-6 opacity-70 italic flex-grow">"The highlight of our son's 5th birthday. Seeing him inside a bubble was a core memory for all of us! Professional and magical."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Sarah Jenkins" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-sm">Sarah Jenkins</p>
+                            <p class="text-xs opacity-50">Happy Parent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="mb-6 opacity-70 italic flex-grow">"We booked them for our community festival. The giant bubbles drew a crowd within minutes. Amazing visual impact!"</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Mark Thompson" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-sm">Mark Thompson</p>
+                            <p class="text-xs opacity-50">Event Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="mb-6 opacity-70 italic flex-grow">"Educational yet extremely entertaining. The STEM bubble lab was the perfect addition to our school science week."</p>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <img src="https://i.pravatar.cc/150?img=9" alt="Linda Wu" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-sm">Linda Wu</p>
+                            <p class="text-xs opacity-50">School Principal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA Banner -->
+            <div class="relative rounded-[3rem] overflow-hidden bg-gradient-to-r from-primary via-cyan to-purple p-1 lg:p-2" data-aos="zoom-in">
+                <div class="bg-white dark:bg-dark rounded-[2.8rem] p-12 lg:p-20 text-center relative overflow-hidden">
+                    <!-- Decorative Background Circles -->
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-cyan/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-purple/10 rounded-full blur-3xl"></div>
+                    
+                    <h2 class="text-4xl lg:text-6xl font-black mb-8 relative z-10">Bring the Magic to <br> Your Event Today</h2>
+                    <p class="text-xl opacity-70 mb-12 max-w-2xl mx-auto relative z-10">Ready to create unforgettable memories? Secure your date and let the shimmering wonders begin.</p>
+                    <div class="flex flex-wrap justify-center gap-6 relative z-10">
+                        <a href="contact.html" class="btn-primary scale-125">Book Your Show Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 pt-24 pb-12 border-t border-slate-100 dark:border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 group mb-6 inline-flex transition-all">
+                        <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary via-cyan to-purple rounded-full blur-sm opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8 relative z-10" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="url(#bubble-grad-footer)" stroke-width="1.5"/>
+                                <path d="M15 8.5C15 8.5 14.5 7.5 13 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                <defs><linearGradient id="bubble-grad-footer" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
+                    </a>
+                    <p class="opacity-60 leading-relaxed">The world's premier bubble entertainment company. Delivering wonder, science, and joy to every event we touch.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 opacity-60">
+                        <li><a href="about.html" class="hover:text-cyan transition-colors">Our Story</a></li>
+                        <li><a href="services.html" class="hover:text-cyan transition-colors">Services</a></li>
+                        <li><a href="packages.html" class="hover:text-cyan transition-colors">Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-cyan transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-4 opacity-60">
+                        <li>hello@bubblemagic.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>123 Magic Lane, Wonderland</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="opacity-60 mb-6 text-sm">Join the magic circle for exclusive updates and party tips.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Email" class="bg-slate-100 dark:bg-white/5 border-none rounded-full px-4 py-2 w-full outline-none focus:ring-2 ring-cyan">
+                        <button class="p-2 bg-primary text-white rounded-full hover:bg-cyan transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-100 dark:border-white/5 text-center text-sm opacity-40">
+                <p>&copy; 2026 Bubble Show & Giant Bubble Entertainment. All magical rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

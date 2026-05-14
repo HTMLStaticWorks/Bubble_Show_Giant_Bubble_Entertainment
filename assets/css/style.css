@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&family=Fredoka:wght@400;600&display=swap');
+
+:root {
+    --primary-blue: #3B82F6;
+    --bubble-cyan: #22D3EE;
+    --purple-glow: #8B5CF6;
+    --dark-bg: #0F172A;
+    --light-bg: #F8FAFC;
+}
+
+/* Base Body Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+    background-color: #0F172A;
+    color: #ffffff;
+}
+
+/* =============================================
+   MOBILE / TABLET CENTERING & OVERFLOW FIX
+   ============================================= */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Experience | Bubble Show & Giant Bubble Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#3B82F6', cyan: '#22D3EE', purple: '#8B5CF6', dark: '#0F172A' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], poppins: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Premium Design System - Standard CSS to remove IDE warnings */
+        :root {
+            --primary: #3B82F6;
+            --cyan: #22D3EE;
+            --purple: #8B5CF6;
+            --dark: #0F172A;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, var(--primary), var(--cyan), var(--purple));
+            color: white;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 15px -3px rgba(34, 211, 238, 0.3);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(34, 211, 238, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: inherit;
+            border-radius: 9999px;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .nav-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            transition: all 0.3s ease;
+            padding: 1.5rem 0;
+        }
+
+        .nav-sticky.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .nav-sticky.scrolled {
+            background: rgba(15, 23, 42, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-dark text-slate-800 dark:text-white font-sans antialiased overflow-x-hidden selection:bg-cyan selection:text-dark">
+
+    <header class="nav-sticky fixed top-0 w-full z-50 px-4 lg:px-12 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between bg-white/10 dark:bg-dark/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3">
+            <a href="index.html" class="flex items-center gap-2 group transition-all">
+                <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary via-cyan to-purple rounded-full blur-sm opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                    <svg class="w-6 h-6 sm:w-8 sm:h-8 relative z-10" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9" stroke="url(#bubble-grad)" stroke-width="1.5"/>
+                        <path d="M15 8.5C15 8.5 14.5 7.5 13 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <defs><linearGradient id="bubble-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
+            </a>
+            
+            <ul class="hidden lg:flex items-center gap-8 font-semibold">
+                <li><a href="index.html" class="hover:text-cyan transition-colors">Home 1</a></li>
+                <li><a href="home-2.html" class="hover:text-cyan transition-colors">Home 2</a></li>
+                <li><a href="about.html" class="hover:text-cyan transition-colors">About</a></li>
+                <li><a href="services.html" class="hover:text-cyan transition-colors">Services</a></li>
+                <li><a href="packages.html" class="hover:text-cyan transition-colors">Packages</a></li>
+                <li><a href="gallery.html" class="hover:text-cyan transition-colors">Gallery</a></li>
+                
+                <li><a href="contact.html" class="hover:text-cyan transition-colors">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-all">
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                    <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
+                </button>
+                <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-xs px-3 py-1.5 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider">RTL</button>
+                <a href="login.html" class="hidden lg:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
+                <button class="lg:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
+            <ul class="flex flex-col gap-4 font-semibold text-center mb-6">
+                <li><a href="index.html" class="hover:text-cyan transition-colors block">Home 1</a></li>
+                <li><a href="home-2.html" class="hover:text-cyan transition-colors block">Home 2</a></li>
+                <li><a href="about.html" class="hover:text-cyan transition-colors block">About</a></li>
+                <li><a href="services.html" class="hover:text-cyan transition-colors block">Services</a></li>
+                <li><a href="packages.html" class="hover:text-cyan transition-colors block">Packages</a></li>
+                <li><a href="gallery.html" class="hover:text-cyan transition-colors block">Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-cyan transition-colors block">Contact</a></li>
+            </ul>
+            <div class="flex flex-col gap-4 items-center border-t border-slate-200 dark:border-white/10 pt-6">
+                <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-sm px-6 py-3 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider w-full">RTL</button>
+                <a href="login.html" class="btn-primary py-3 px-6 text-sm w-full text-center">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-transparent to-dark"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10" data-aos="zoom-out">
+            <h1 class="text-4xl sm:text-6xl lg:text-9xl font-black mb-8 leading-none tracking-tighter">
+                PURE <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple">MAGNIFICENCE</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl opacity-80 max-w-3xl mx-auto mb-12">
+                The world's most immersive bubble production. A cinematic journey of light, science, and wonder.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <button class="btn-primary scale-110 w-full sm:w-auto">Watch Trailer</button>
+                <button class="btn-secondary scale-110 w-full sm:w-auto">View Gallery</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Bubble Experience -->
+    <section class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-5xl font-black mb-8">Interactive <br> <span class="text-cyan">Sensory</span> Wonder</h2>
+                    <p class="text-xl opacity-60 mb-10 leading-relaxed">
+                        We don't just show you magic; we let you touch it. Our interactive stations allow guests to create their own shimmering masterpieces under the guidance of master artists.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="glass-card bg-white/5 border-white/5">
+                            <h4 class="text-3xl font-bold text-primary mb-2">100%</h4>
+                            <p class="text-sm opacity-50 uppercase font-bold tracking-widest">Hands-On</p>
+                        </div>
+                        <div class="glass-card bg-white/5 border-white/5">
+                            <h4 class="text-3xl font-bold text-purple mb-2">50+</h4>
+                            <p class="text-sm opacity-50 uppercase font-bold tracking-widest">Wand Types</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <img src="https://static.tildacdn.com/tild3638-3831-4932-b665-646331383137/raketka-5-sm-e142061.jpg
+                    " class="rounded-[4rem] shadow-2xl border border-white/10">
+                    <div class="absolute inset-0 bg-cyan/20 blur-3xl -z-10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: The Bubble Arsenal -->
+    <section class="py-24 relative bg-slate-50 dark:bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4">The <span class="text-purple italic">Arsenal</span></h2>
+                <p class="text-xl opacity-60">Tools of wonder crafted for maximum amazement.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-cyan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan/20">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Giant Loops</h3>
+                    <p class="opacity-70">Creating bubbles so large a full grown adult can stand inside them.</p>
+                </div>
+                <div class="glass-card text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-cyan to-purple rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple/20">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Smoke Injectors</h3>
+                    <p class="opacity-70">Filling spheres with dense, pure white fog for dramatic popping effects.</p>
+                </div>
+                <div class="glass-card text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple to-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">LED Tables</h3>
+                    <p class="opacity-70">Illuminating complex bubble sculptures from below with vibrant colors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Magical Formats -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <img src="https://media.istockphoto.com/id/1421313801/photo/woman-magician-illusionist-circus-in-theatrical-clothes-stylish-hat-in-shows-soap-bubbles.jpg?s=612x612&w=0&k=20&c=rx16yKiH8K0sOxObho_Df_oBzafk0s_OnNfMkP2ocfk=" class="rounded-[3rem] shadow-2xl object-cover w-full h-[30rem]">
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6">Tailored <span class="text-primary italic">Formats</span></h2>
+                    <p class="text-lg opacity-70 mb-8 leading-relaxed">Whether it's an intimate birthday gathering or a massive corporate gala, our performances scale to deliver the perfect level of astonishment.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-cyan/50 transition-colors">
+                            <div class="text-cyan font-black text-2xl">01</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Stage Shows</h4>
+                                <p class="opacity-60 text-sm">Full theatrical productions with lighting, music, and dramatic narratives.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-purple/50 transition-colors">
+                            <div class="text-purple font-black text-2xl">02</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Roving Entertainment</h4>
+                                <p class="opacity-60 text-sm">Artists mingling with crowds, creating spontaneous moments of joy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-primary/50 transition-colors">
+                            <div class="text-primary font-black text-2xl">03</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Workshop Stations</h4>
+                                <p class="opacity-60 text-sm">Dedicated areas where guests learn the science and art of bubble making.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Cinematic Showcase -->
+    <section class="py-24 relative bg-dark text-white">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan via-dark to-dark"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl lg:text-6xl font-black mb-8 italic">Experience the <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-primary">Spectacle</span></h2>
+            <p class="text-xl opacity-70 mb-12 max-w-2xl mx-auto">Watch highlights from our most dazzling international performances.</p>
+            
+            <div class="relative max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-2 border-white/10 group cursor-pointer" data-aos="zoom-in">
+                <img src="https://media.istockphoto.com/id/451193363/photo/female-mime-catching-bubbles-against-black-background.jpg?s=612x612&w=0&k=20&c=aWGJRD0e21hrbBh-HCrDVhmw5e1ey5A8_pZh58qNbUY=" class="w-full h-[20rem] md:h-[35rem] object-cover transition-transform duration-700 group-hover:scale-105" alt="Showcase Video Thumbnail">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/20">
+                    <div class="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center transition-transform group-hover:scale-110 shadow-2xl">
+                        <svg class="w-10 h-10 text-white ml-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Booking CTA -->
+    <section class="py-16 sm:py-32 bg-primary/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto glass-card p-8 sm:p-20 border-primary/20" data-aos="flip-up">
+                <h2 class="text-4xl sm:text-6xl font-black mb-8">Ready to <span class="text-cyan">Amaze</span>?</h2>
+                <p class="text-lg sm:text-xl opacity-60 mb-12">Limited dates available for 2026. Secure your cinematic bubble experience now.</p>
+                <a href="contact.html" class="btn-primary px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl inline-block w-full sm:w-auto">Reserve Your Date</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-slate-900 pt-24 pb-12 border-t border-slate-100 dark:border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 group mb-6 inline-flex">
+                        <div class="relative w-10 h-10 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary via-cyan to-purple rounded-full blur-sm opacity-40 group-hover:opacity-100 transition-opacity"></div>
+                            <svg class="w-8 h-8 relative z-10" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="url(#bubble-grad-footer)" stroke-width="1.5"/>
+                                <path d="M15 8.5C15 8.5 14.5 7.5 13 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                <defs><linearGradient id="bubble-grad-footer" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="0.5" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                        <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white">MAGIC</span></span>
+                    </a>
+                    <p class="opacity-60 leading-relaxed">The world's premier bubble entertainment company. Delivering wonder, science, and joy to every event we touch.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 opacity-60">
+                        <li><a href="about.html" class="hover:text-cyan transition-colors">Our Story</a></li>
+                        <li><a href="services.html" class="hover:text-cyan transition-colors">Services</a></li>
+                        <li><a href="packages.html" class="hover:text-cyan transition-colors">Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-cyan transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-4 opacity-60">
+                        <li>hello@bubblemagic.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>123 Magic Lane, Wonderland</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="opacity-60 mb-6 text-sm">Join the magic circle for exclusive updates and party tips.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Email" class="bg-slate-100 dark:bg-white/5 border-none rounded-full px-4 py-2 w-full outline-none focus:ring-2 ring-cyan">
+                        <button class="p-2 bg-primary text-white rounded-full hover:bg-cyan transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-100 dark:border-white/5 text-center text-sm opacity-40">
+                <p>&copy; 2026 Bubble Show &amp; Giant Bubble Entertainment. All magical rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
