@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Cinematic Experience | Bubble Show & Giant Bubble Entertainment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -111,7 +112,7 @@
 <body class="bg-slate-50 dark:bg-dark text-slate-800 dark:text-white font-sans antialiased overflow-x-hidden selection:bg-cyan selection:text-dark">
 
     <header class="nav-sticky fixed top-0 w-full z-50 px-4 lg:px-12 transition-all duration-300">
-        <nav class="max-w-7xl mx-auto flex items-center justify-between bg-white/10 dark:bg-dark/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between bg-white/80 dark:bg-dark/10 backdrop-blur-md border border-slate-200/80 dark:border-white/20 rounded-2xl px-4 py-3">
             <a href="index.html" class="flex items-center gap-2 group transition-all">
                 <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
                     <div class="absolute inset-0 bg-gradient-to-tr from-primary via-cyan to-purple rounded-full blur-sm opacity-40 group-hover:opacity-100 transition-opacity"></div>
@@ -124,7 +125,7 @@
                 <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
             </a>
             
-            <ul class="hidden lg:flex items-center gap-8 font-semibold">
+            <ul class="hidden xl:flex items-center gap-8 font-semibold">
                 <li><a href="index.html" class="hover:text-cyan transition-colors">Home 1</a></li>
                 <li><a href="home-2.html" class="hover:text-cyan transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-cyan transition-colors">About</a></li>
@@ -141,12 +142,12 @@
                     <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
                 </button>
                 <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-xs px-3 py-1.5 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider">RTL</button>
-                <a href="login.html" class="hidden lg:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
-                <button class="lg:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <a href="login.html" class="hidden xl:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
+                <button class="xl:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
+        <div id="mobile-menu" class="hidden xl:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
             <ul class="flex flex-col gap-4 font-semibold text-center mb-6">
                 <li><a href="index.html" class="hover:text-cyan transition-colors block">Home 1</a></li>
                 <li><a href="home-2.html" class="hover:text-cyan transition-colors block">Home 2</a></li>
@@ -178,8 +179,8 @@
                 The world's most immersive bubble production. A cinematic journey of light, science, and wonder.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <button class="btn-primary scale-110 w-full sm:w-auto">Watch Trailer</button>
-                <button class="btn-secondary scale-110 w-full sm:w-auto">View Gallery</button>
+                <a href="services.html" class="btn-primary scale-110 w-full sm:w-auto">Watch Trailer</a>
+                <a href="gallery.html" class="btn-secondary scale-110 w-full sm:w-auto">View Gallery</a>
             </div>
         </div>
     </section>
@@ -189,7 +190,10 @@
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-5xl font-black mb-8">Interactive <br> <span class="text-cyan">Sensory</span> Wonder</h2>
+                    <h2 class="text-5xl font-black mb-8 leading-tight">
+                        <span class="block">Interactive</span>
+                        <span class="block"><span class="text-cyan">Sensory</span> Wonder</span>
+                    </h2>
                     <p class="text-xl opacity-60 mb-10 leading-relaxed">
                         We don't just show you magic; we let you touch it. Our interactive stations allow guests to create their own shimmering masterpieces under the guidance of master artists.
                     </p>
@@ -206,7 +210,7 @@
                 </div>
                 <div class="relative" data-aos="fade-left">
                     <img src="https://static.tildacdn.com/tild3638-3831-4932-b665-646331383137/raketka-5-sm-e142061.jpg
-                    " class="rounded-[4rem] shadow-2xl border border-white/10">
+                    " class="rounded-[4rem] shadow-2xl border border-white/10 md:block md:mx-auto">
                     <div class="absolute inset-0 bg-cyan/20 blur-3xl -z-10 rounded-full"></div>
                 </div>
             </div>
@@ -220,7 +224,7 @@
                 <h2 class="text-4xl lg:text-5xl font-black mb-4">The <span class="text-purple italic">Arsenal</span></h2>
                 <p class="text-xl opacity-60">Tools of wonder crafted for maximum amazement.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="glass-card text-center group" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-cyan rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-cyan/20">
                         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -235,7 +239,7 @@
                     <h3 class="text-2xl font-bold mb-3">Smoke Injectors</h3>
                     <p class="opacity-70">Filling spheres with dense, pure white fog for dramatic popping effects.</p>
                 </div>
-                <div class="glass-card text-center group" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass-card text-center group md:col-span-2 md:w-[calc(50%_-_1rem)] md:justify-self-center lg:col-span-1 lg:w-auto lg:justify-self-auto" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple to-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
                         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                     </div>
@@ -331,6 +335,17 @@
                         <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white">MAGIC</span></span>
                     </a>
                     <p class="opacity-60 leading-relaxed">The world's premier bubble entertainment company. Delivering wonder, science, and joy to every event we touch.</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.2V11H8v3h2.4v8h3.1z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm9.5 2a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.1-.4-4.6c-.2-.8-.9-1.5-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.6c-.8.2-1.5.9-1.8 1.8C1 8.9 1 12 1 12s0 3.1.4 4.6c.2.8.9 1.5 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.6c.8-.2 1.5-.9 1.8-1.8.4-1.5.4-4.6.4-4.6zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-6">Quick Links</h4>

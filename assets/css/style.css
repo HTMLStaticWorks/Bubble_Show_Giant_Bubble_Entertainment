@@ -52,3 +52,58 @@ html, body {
     }
 }
 
+/* =============================================
+   NAVBAR CONSISTENCY FIX
+   ============================================= */
+
+.nav-sticky {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+.nav-sticky.scrolled {
+    padding: 0 !important;
+}
+
+.nav-sticky > nav {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+@media (min-width: 1024px) {
+    .nav-sticky > nav {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+.nav-sticky ul a[aria-current="page"] {
+    color: var(--bubble-cyan) !important;
+}
+
+.nav-sticky > nav > div > button[onclick*="document.documentElement.dir"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.nav-sticky > nav > div > button[onclick*="document.documentElement.dir"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

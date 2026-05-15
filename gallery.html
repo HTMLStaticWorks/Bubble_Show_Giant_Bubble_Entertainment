@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Gallery | Bubble Show & Giant Bubble Entertainment</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -124,7 +125,7 @@
                 <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
             </a>
             
-            <ul class="hidden lg:flex items-center gap-8 font-semibold">
+            <ul class="hidden xl:flex items-center gap-8 font-semibold">
                 <li><a href="index.html" class="hover:text-cyan transition-colors">Home 1</a></li>
                 <li><a href="home-2.html" class="hover:text-cyan transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-cyan transition-colors">About</a></li>
@@ -141,12 +142,12 @@
                     <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
                 </button>
                 <button onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl'" class="font-bold text-xs px-3 py-1.5 rounded-full bg-slate-200 dark:bg-white/20 hover:bg-slate-300 dark:hover:bg-white/30 transition-all uppercase tracking-wider">RTL</button>
-                <a href="login.html" class="hidden lg:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
-                <button class="lg:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <a href="login.html" class="hidden xl:inline-flex btn-primary py-2 px-6 text-sm">Login</a>
+                <button class="xl:hidden p-2 text-slate-800 dark:text-white hover:text-primary transition-colors" onclick="document.getElementById('mobile-menu')?.classList.toggle('hidden')"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
+        <div id="mobile-menu" class="hidden xl:hidden mt-2 bg-white/95 dark:bg-dark/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl p-6 absolute top-full left-6 right-6 shadow-2xl">
             <ul class="flex flex-col gap-4 font-semibold text-center mb-6">
                 <li><a href="index.html" class="hover:text-cyan transition-colors block">Home 1</a></li>
                 <li><a href="home-2.html" class="hover:text-cyan transition-colors block">Home 2</a></li>
@@ -163,7 +164,7 @@
         </div>
     </header>
 
-    <section class="pt-32 lg:pt-40 pb-20 text-center">
+    <section class="pt-32 lg:pt-40 pb-24 text-center border-b border-slate-200 dark:border-white/10 shadow-sm">
         <div class="container mx-auto px-6" data-aos="fade-up">
             <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 italic">Magic in <span class="text-cyan">Motion</span></h1>
             <p class="text-xl opacity-70 max-w-2xl mx-auto mb-12">Witness the shimmering wonders of our performances through the lens.</p>
@@ -179,38 +180,38 @@
 
     <section class="pb-32">
         <div class="container mx-auto px-6">
-            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
                 <!-- Gallery Item 1 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
-                    <img src="https://www.shutterstock.com/image-photo/very-large-soap-bubbles-show-260nw-1347423743.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
+                    <img src="https://media.istockphoto.com/id/1211955478/photo/children-at-the-feast-soap-bubbles-show-childrens-party-to-burst-the-soap-bubble.jpg?s=612x612&w=0&k=20&c=HaNQ2XG0otGQqFpfbtSxdZwjOR520NpzCFwTUsOdEAU=" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                         <p class="font-bold text-white text-xl">Outdoor Giant Bubbles</p>
                     </div>
                 </div>
                 <!-- Gallery Item 2 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtB5Oks0C9jbRVI3dvWjZUBSVwbk8NoWjuXQ&s" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-purple/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                         <p class="font-bold text-white text-xl">Stage Magic</p>
                     </div>
                 </div>
                 <!-- Gallery Item 3 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
                     <img src="https://c.files.bbci.co.uk/c274/live/4d15f960-84b8-11f0-b98d-d308c56c1729.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-cyan/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                         <p class="font-bold text-white text-xl">The Bubble Sculptor</p>
                     </div>
                 </div>
                 <!-- Gallery Item 4 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
                     <img src="https://media.istockphoto.com/id/517124830/photo/little-boy-makes-big-soap-bubbles.jpg?s=612x612&w=0&k=20&c=OoLPdUkJvGJ-1x_OBqge-O0VWctqZW3NmykLAsW00RY=" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 </div>
                 <!-- Gallery Item 5 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
                     <img src="https://media.istockphoto.com/id/451193363/photo/female-mime-catching-bubbles-against-black-background.jpg?s=612x612&w=0&k=20&c=aWGJRD0e21hrbBh-HCrDVhmw5e1ey5A8_pZh58qNbUY=" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 </div>
                 <!-- Gallery Item 6 -->
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer">
+                <div class="relative group overflow-hidden rounded-3xl cursor-pointer aspect-[4/3]">
                     <img src="https://www.shutterstock.com/image-photo/man-artist-fiddle-many-gel-260nw-705992968.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 </div>
             </div>
@@ -222,7 +223,7 @@
         <div class="absolute inset-0 bg-primary/5"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                <div class="w-full lg:w-1/2 pl-2 lg:pl-8" data-aos="fade-right">
                     <h2 class="text-4xl lg:text-5xl font-black mb-6">Featured <span class="text-cyan italic">Performances</span></h2>
                     <p class="text-lg opacity-70 mb-8 leading-relaxed">
                         Some moments are too big for a single photo. Watch our highlight reel to see the true scale and emotional impact of our giant bubble productions.
@@ -256,7 +257,7 @@
                 <p class="font-bold text-xl mb-12">@BubbleMagicLive</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 <a href="#" class="block overflow-hidden rounded-2xl group relative">
                     <img src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/pid0eg1yhobt6a5fvvba/KobeUrbanAquariumAQUARIUMARTatoaAdmissionTicket-KlookIndia.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -269,7 +270,7 @@
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </div>
                 </a>
-                <a href="#" class="block overflow-hidden rounded-2xl group relative">
+                <a href="#" class="block overflow-hidden rounded-2xl group relative sm:col-span-2 sm:w-[calc(50%_-_0.5rem)] sm:justify-self-center lg:col-span-1 lg:w-auto lg:justify-self-auto">
                     <img src="https://cdn.shopify.com/s/files/1/0595/1432/3017/files/YI010-Product-Effect_2.jpg?v=1725442084" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -295,6 +296,17 @@
                         <span class="text-xl sm:text-2xl font-black bg-gradient-to-r from-primary via-cyan to-purple bg-clip-text text-transparent font-poppins tracking-tight">BUBBLE<span class="text-slate-800 dark:text-white transition-colors">MAGIC</span></span>
                     </a>
                     <p class="opacity-60 leading-relaxed">The world's premier bubble entertainment company. Delivering wonder, science, and joy to every event we touch.</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.2V11H8v3h2.4v8h3.1z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm9.5 2a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-cyan/20 dark:hover:bg-cyan/20 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.1-.4-4.6c-.2-.8-.9-1.5-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.6c-.8.2-1.5.9-1.8 1.8C1 8.9 1 12 1 12s0 3.1.4 4.6c.2.8.9 1.5 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.6c.8-.2 1.5-.9 1.8-1.8.4-1.5.4-4.6.4-4.6zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-6">Quick Links</h4>
