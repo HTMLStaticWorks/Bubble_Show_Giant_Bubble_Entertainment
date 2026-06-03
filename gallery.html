@@ -164,8 +164,12 @@
         </div>
     </header>
 
-    <section class="pt-32 lg:pt-40 pb-24 text-center border-b border-slate-200 dark:border-white/10 shadow-sm">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section class="relative pt-32 lg:pt-40 pb-24 text-center border-b border-slate-200 dark:border-white/10 shadow-sm overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-50/90 dark:bg-dark/80"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10" data-aos="fade-up">
             <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 italic">Magic in <span class="text-cyan">Motion</span></h1>
             <p class="text-xl opacity-70 max-w-2xl mx-auto mb-12">Witness the shimmering wonders of our performances through the lens.</p>
             
@@ -178,7 +182,7 @@
         </div>
     </section>
 
-    <section class="pb-32">
+    <section class="pt-20 pb-32">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
                 <!-- Gallery Item 1 -->
@@ -219,7 +223,7 @@
     </section>
 
     <!-- Section: Featured Performances -->
-    <section class="py-24 relative bg-dark text-white overflow-hidden">
+    <section class="py-24 min-h-[50vh] flex items-center relative bg-dark text-white overflow-hidden">
         <div class="absolute inset-0 bg-primary/5"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -248,34 +252,24 @@
     </section>
 
     <!-- Section: Follow The Magic -->
-    <section class="py-24 relative bg-slate-50 dark:bg-slate-900/50">
-        <div class="container mx-auto px-6 text-center">
-            <div data-aos="fade-up">
-                <svg class="w-12 h-12 mx-auto text-purple mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                <h2 class="text-4xl font-black mb-4">Follow The <span class="text-purple italic">Magic</span></h2>
-                <p class="text-xl opacity-60 mb-10">Stay updated with our latest tricks and daily bubble inspiration on Instagram.</p>
-                <p class="font-bold text-xl mb-12">@BubbleMagicLive</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <a href="#" class="block overflow-hidden rounded-2xl group relative">
-                    <img src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/pid0eg1yhobt6a5fvvba/KobeUrbanAquariumAQUARIUMARTatoaAdmissionTicket-KlookIndia.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <!-- Final CTA Banner -->
+    <section class="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="relative rounded-[3rem] overflow-hidden bg-gradient-to-r from-primary via-cyan to-purple p-1 lg:p-2" data-aos="zoom-in">
+                <div class="bg-white dark:bg-dark rounded-[2.8rem] p-12 lg:p-20 text-center relative overflow-hidden min-h-[50vh] flex flex-col items-center justify-center">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-20 dark:opacity-30">
                     </div>
-                </a>
-                <a href="#" class="block overflow-hidden rounded-2xl group relative">
-                    <img src="https://www.pro-toplight.com/wp-content/uploads/2025/02/TOP-Dance-Super-Bubble-Machine-Music-festival-stage.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <!-- Decorative Background Circles -->
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-cyan/20 rounded-full blur-3xl z-0"></div>
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-purple/20 rounded-full blur-3xl z-0"></div>
+                    
+                    <h2 class="text-4xl lg:text-6xl font-black mb-8 relative z-10">Follow The Shimmering Magic</h2>
+                    <p class="text-xl opacity-70 mb-12 max-w-2xl mx-auto relative z-10">Check out our latest performances, behind-the-scenes moments, and most spectacular bubble creations.</p>
+                    <div class="flex flex-wrap justify-center gap-6 relative z-10">
+                        <a href="contact.html" class="btn-primary scale-125">Follow on Instagram</a>
                     </div>
-                </a>
-                <a href="#" class="block overflow-hidden rounded-2xl group relative sm:col-span-2 sm:w-[calc(50%_-_0.5rem)] sm:justify-self-center lg:col-span-1 lg:w-auto lg:justify-self-auto">
-                    <img src="https://cdn.shopify.com/s/files/1/0595/1432/3017/files/YI010-Product-Effect_2.jpg?v=1725442084" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>

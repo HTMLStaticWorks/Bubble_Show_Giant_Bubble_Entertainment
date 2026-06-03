@@ -22,6 +22,8 @@
     <style>
         /* Premium Design System - Standard CSS to remove IDE warnings */
         :root {
+
+            
             --primary: #3B82F6;
             --cyan: #22D3EE;
             --purple: #8B5CF6;
@@ -262,31 +264,24 @@
     </section>
 
     <!-- FAQ Module -->
-    <section class="py-24 bg-white dark:bg-white/5">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl font-black text-center mb-16">Frequently Asked Questions</h2>
-            <div class="space-y-6">
-                <details class="glass-card p-6 group cursor-pointer" open>
-                    <summary class="font-bold text-xl flex justify-between items-center list-none">
-                        Is it safe for children?
-                        <span class="group-open:rotate-180 transition-transform">↓</span>
-                    </summary>
-                    <p class="mt-4 opacity-70">Yes! Our bubble solution is 100% non-toxic, hypoallergenic, and environmentally friendly. It's safe for eyes, skin, and even if accidentally swallowed in small amounts.</p>
-                </details>
-                <details class="glass-card p-6 group cursor-pointer">
-                    <summary class="font-bold text-xl flex justify-between items-center list-none">
-                        Do you travel?
-                        <span class="group-open:rotate-180 transition-transform">↓</span>
-                    </summary>
-                    <p class="mt-4 opacity-70">We certainly do! We cover a 50-mile radius from our headquarters. For events further away, we apply a modest travel fee per mile.</p>
-                </details>
-                <details class="glass-card p-6 group cursor-pointer">
-                    <summary class="font-bold text-xl flex justify-between items-center list-none">
-                        How long is the show?
-                        <span class="group-open:rotate-180 transition-transform">↓</span>
-                    </summary>
-                    <p class="mt-4 opacity-70">Standard shows range from 45 to 90 minutes depending on the package you choose. Custom stage productions can be tailored to any duration.</p>
-                </details>
+        <!-- Final CTA Banner -->
+    <section class="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="relative rounded-[3rem] overflow-hidden bg-gradient-to-r from-primary via-cyan to-purple p-1 lg:p-2" data-aos="zoom-in">
+                <div class="bg-white dark:bg-dark rounded-[2.8rem] p-12 lg:p-20 text-center relative overflow-hidden min-h-[50vh] flex flex-col items-center justify-center">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-20 dark:opacity-30">
+                    </div>
+                    <!-- Decorative Background Circles -->
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-cyan/20 rounded-full blur-3xl z-0"></div>
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-purple/20 rounded-full blur-3xl z-0"></div>
+                    
+                    <h2 class="text-4xl lg:text-6xl font-black mb-8 relative z-10">Still Have Questions?</h2>
+                    <p class="text-xl opacity-70 mb-12 max-w-2xl mx-auto relative z-10">Our friendly team is here to help you plan the perfect magical entertainment for your upcoming event.</p>
+                    <div class="flex flex-wrap justify-center gap-6 relative z-10">
+                        <a href="contact.html" class="btn-primary scale-125">Get in Touch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
